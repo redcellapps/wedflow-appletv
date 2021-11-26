@@ -44,12 +44,12 @@ class ViewController: UIViewController {
         
         //getting the username and password
         let parameters: Parameters=[
-//            "email":"shub.kansal@gmail.com",
-//            "password":"shubham",
-//            "tvCode":"brz1js"
-            "email":userEmail.text!,
-            "password":userPassword.text!,
-            "tvCode": String(describing: userData.string(forKey: "tvcode"))
+            "email":"shub.kansal@gmail.com",
+            "password":"shubham",
+            "tvCode":"brz1js"
+//            "email":userEmail.text!,
+//            "password":userPassword.text!,
+//            "tvCode": String(describing: userData.string(forKey: "tvcode"))
         ]
         
         //making a post request
