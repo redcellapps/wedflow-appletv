@@ -5,7 +5,6 @@
 //  Created by Momcilo Stankovic on 02/07/2020.
 //  Copyright © 2020 RedCellApps. All rights reserved.
 //
-
 import Foundation
 // MARK: - Gallery
 class Gallery: Codable {
@@ -25,8 +24,9 @@ class Gallery: Codable {
     var isShareable: Int?
     var urlKey: String?
     var backgroundAudioId: String?
-    var studioId: Studioid?
+    var studioId: String?
     var backgroundVideoId: String?
+    var isTvAvailable: Int?
     var url: String?
     var embedUrl: String?
     var coverPhoto: CoverPhoto?
@@ -52,6 +52,7 @@ class Gallery: Codable {
         case backgroundAudioId
         case studioId
         case backgroundVideoId
+        case isTvAvailable
         case url
         case embedUrl
         case coverPhoto
@@ -59,7 +60,7 @@ class Gallery: Codable {
         case sets
     }
 
-    init(id: String?, weddingId: String?, createdAt: String?, updatedAt: String?, type: String?, title: String?, coverPhotoId: String?, highlightsVideoId: String?, productId: String?, subtitle: String?, isPrivate: Int?, isDownloadable: Int?, style: Style?, isShareable: Int?, urlKey: String?, backgroundAudioId: String?, studioId: Studioid?, backgroundVideoId: String?, url: String?, embedUrl: String?, coverPhoto: CoverPhoto?, studio: Studio?, sets: [Set]?) {
+    init(id: String?, weddingId: String?, createdAt: String?, updatedAt: String?, type: String?, title: String?, coverPhotoId: String?, highlightsVideoId: String?, productId: String?, subtitle: String?, isPrivate: Int?, isDownloadable: Int?, style: Style?, isShareable: Int?, urlKey: String?, backgroundAudioId: String?, studioId: String?, backgroundVideoId: String?, isTvAvailable: Int?, url: String?, embedUrl: String?, coverPhoto: CoverPhoto?, studio: Studio?, sets: [Set]?) {
         self.id = id
         self.weddingId = weddingId
         self.createdAt = createdAt
@@ -78,6 +79,7 @@ class Gallery: Codable {
         self.backgroundAudioId = backgroundAudioId
         self.studioId = studioId
         self.backgroundVideoId = backgroundVideoId
+        self.isTvAvailable = isTvAvailable
         self.url = url
         self.embedUrl = embedUrl
         self.coverPhoto = coverPhoto
@@ -91,7 +93,7 @@ class Gallery: Codable {
 extension Gallery {
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(Gallery.self, from: data)
-        self.init(id: me.id, weddingId: me.weddingId, createdAt: me.createdAt, updatedAt: me.updatedAt, type: me.type, title: me.title, coverPhotoId: me.coverPhotoId, highlightsVideoId: me.highlightsVideoId, productId: me.productId, subtitle: me.subtitle, isPrivate: me.isPrivate, isDownloadable: me.isDownloadable, style: me.style, isShareable: me.isShareable, urlKey: me.urlKey, backgroundAudioId: me.backgroundAudioId, studioId: me.studioId, backgroundVideoId: me.backgroundVideoId, url: me.url, embedUrl: me.embedUrl, coverPhoto: me.coverPhoto, studio: me.studio,sets: me.sets)
+        self.init(id: me.id, weddingId: me.weddingId, createdAt: me.createdAt, updatedAt: me.updatedAt, type: me.type, title: me.title, coverPhotoId: me.coverPhotoId, highlightsVideoId: me.highlightsVideoId, productId: me.productId, subtitle: me.subtitle, isPrivate: me.isPrivate, isDownloadable: me.isDownloadable, style: me.style, isShareable: me.isShareable, urlKey: me.urlKey, backgroundAudioId: me.backgroundAudioId, studioId: me.studioId, backgroundVideoId: me.backgroundVideoId,  isTvAvailable: me.isTvAvailable, url: me.url, embedUrl: me.embedUrl, coverPhoto: me.coverPhoto, studio: me.studio,sets: me.sets)
     }
 
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -122,8 +124,9 @@ extension Gallery {
         isShareable: Int?? = nil,
         urlKey: String?? = nil,
         backgroundAudioId: String?? = nil,
-        studioId: Studioid?? = nil,
+        studioId: String?? = nil,
         backgroundVideoId: String?? = nil,
+        isTvAvailable: Int?? = nil,
         url: String?? = nil,
         embedUrl: String?? = nil,
         coverPhoto: CoverPhoto?? = nil,
@@ -149,6 +152,7 @@ extension Gallery {
             backgroundAudioId: backgroundAudioId ?? self.backgroundAudioId,
             studioId: studioId ?? self.studioId,
             backgroundVideoId: backgroundVideoId ?? self.backgroundVideoId,
+            isTvAvailable: isTvAvailable ?? self.isTvAvailable,
             url: url ?? self.url,
             embedUrl: embedUrl ?? self.embedUrl,
             coverPhoto: coverPhoto ?? self.coverPhoto,

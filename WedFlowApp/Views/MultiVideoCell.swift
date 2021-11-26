@@ -10,10 +10,13 @@ import UIKit
 
 class MultiVideoCell: UICollectionViewCell {
     
-    @IBOutlet weak var cellBackGround: UIImageView!
+    @IBOutlet weak var cellBackground: UIImageView!
+    
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var cellTitle: UILabel!
+    @IBOutlet weak var albumContentView: UIView!
     
-    
+    var tmpBounds: CGRect!
     private lazy var gradient: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
@@ -45,16 +48,46 @@ class MultiVideoCell: UICollectionViewCell {
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if (self.isFocused)
-        {
-            self.gradient.removeFromSuperlayer()
-            self.cellBackGround.adjustsImageWhenAncestorFocused = true
-        }
-        else
-        {
-            fadeOut()
-            self.cellBackGround.adjustsImageWhenAncestorFocused = false
-        }
+        super.didUpdateFocus(in: context, with: coordinator)
+        if context.nextFocusedView == self {
+            
+             coordinator.addCoordinatedAnimations({
+                UIView.animate(withDuration: UIView.inheritedAnimationDuration / 2) {
+                    //self.gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+                    //self.fadeOut()
+                    self.tmpBounds = self.cellBackground.bounds
+                    self.cellBackground.bounds = self.albumContentView.bounds
+                                //self.gradient.removeFromSuperlayer()
+                    self.titleView.bounds = self.albumContentView.bounds
+                    self.cellBackground.adjustsImageWhenAncestorFocused = false
+               }
+             }, completion: nil)
+         } else if context.previouslyFocusedView == self {
+           
+             coordinator.addCoordinatedAnimations({
+                UIView.animate(withDuration: UIView.inheritedAnimationDuration * 3) {
+                    //self.gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+                    //self.fadeOut()
+                    self.cellBackground.bounds = self.tmpBounds
+                    self.titleView.bounds = self.tmpBounds
+                    self.cellBackground.adjustsImageWhenAncestorFocused = false
+               }
+             }, completion: nil)
+         }
+        
+        
+        
+        
+//        if (self.isFocused)
+//        {
+//            self.gradient.removeFromSuperlayer()
+//            self.cellBackGround.adjustsImageWhenAncestorFocused = true
+//        }
+//        else
+//        {
+//            fadeOut()
+//            self.cellBackGround.adjustsImageWhenAncestorFocused = false
+//        }
     }
     
     override func layoutSubviews()
@@ -71,16 +104,21 @@ class MultiVideoCell: UICollectionViewCell {
         super.prepareForReuse()
     }
     func fadeOut(){
-        let gradientView = UIView (frame: cellBackGround.frame)
+        let gradientView = UIView (frame: cellBackground.frame)
         gradientView.layer.insertSublayer(gradient, at: 1)
-        cellBackGround.addSubview(gradientView)
+        gradientView.layer.masksToBounds = true
+        gradientView.layer.cornerRadius = 10
+        //gradientView.layer.borderWidth = 1
+        //gradientView.layer.borderColor = UIColor.lightGray.cgColor
+        cellBackground.addSubview(gradientView)
     }
     
     func setImageFrame(){
-        cellBackGround.layer.masksToBounds = true
-        cellBackGround.layer.cornerRadius = 8
-        cellBackGround.layer.borderWidth = 1
-        cellBackGround.layer.borderColor = UIColor.lightGray.cgColor
+        cellBackground.layer.masksToBounds = true
+        cellBackground.layer.cornerRadius = 10
+        cellBackground.layer.borderWidth = 1
+        cellBackground.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
     
 }

@@ -10,10 +10,10 @@ import UIKit
 import AVKit
 
 class VideoPlayerViewController: UIViewController {
+    
     var asset: AVAsset!
     var video: [Media]! {
         didSet {
-    
             let videoURL = URL (string: video[0].url ?? "")
             asset = AVAsset (url: videoURL!)
             }
@@ -40,14 +40,11 @@ class VideoPlayerViewController: UIViewController {
       
       let playerItem = AVPlayerItem(asset: asset)
       let player = AVPlayer(playerItem: playerItem)
-        
-      print ("MOMOMOMOMOMOMOMO SEEK TIME \(sceneTime ?? 0)")
-      
         embeddedPlayerViewController.player = player
       
         if sceneTime != 0 {
 //                let st = Double(sceneTime)
-                    player.seek(to: CMTime(value: CMTimeValue(sceneTime), timescale: 1), toleranceBefore: CMTime.positiveInfinity, toleranceAfter: CMTime.zero)
+                    player.seek(to: CMTime(value: CMTimeValue(sceneTime), timescale: 1))//, toleranceBefore: CMTime.positiveInfinity, toleranceAfter: CMTime.zero)
         }
         if player.status == .readyToPlay && player.currentItem?.status == .readyToPlay {
                     player.play()
@@ -66,7 +63,6 @@ class VideoPlayerViewController: UIViewController {
         
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as!
         VideoPlayerViewController
-        viewController.title = "MOMOMOMOMOMOMOMOMOMOM"
         viewController.video = [video]
         return viewController
       }

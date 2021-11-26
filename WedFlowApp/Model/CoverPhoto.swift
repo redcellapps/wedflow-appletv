@@ -18,15 +18,16 @@ import Foundation
 // MARK: - CoverPhoto
 class CoverPhoto: Codable {
     var id: String?
-    var studioId: Studioid?
-    var userId: UserId?
+    var studioId: String?
+    var userId: String?
     var title: String?
     var createdAt: String?
     var updatedAt: String?
     var fileKey: String?
     var fileSize: Int?
-    var contentType: ContentType?
-    var uploadStatus: UploadStatus?
+    var contentType: String?
+    var uploadStatus: String?
+    var coverPhotoId: String?
     var url: String?
     var thumbs: Thumbs?
     var versions: [JSONAny]?
@@ -42,12 +43,13 @@ class CoverPhoto: Codable {
         case fileSize
         case contentType
         case uploadStatus
+        case coverPhotoId
         case url
         case thumbs
         case versions
     }
 
-    init(id: String?, studioId: Studioid?, userId: UserId?, title: String?, createdAt: String?, updatedAt: String?, fileKey: String?, fileSize: Int?, contentType: ContentType?, uploadStatus: UploadStatus?, url: String?, thumbs: Thumbs?, versions: [JSONAny]?) {
+    init(id: String?, studioId: String?, userId: String?, title: String?, createdAt: String?, updatedAt: String?, fileKey: String?, fileSize: Int?, contentType: String?, uploadStatus: String?, coverPhotoId: String?, url: String?, thumbs: Thumbs?, versions: [JSONAny]?) {
         self.id = id
         self.studioId = studioId
         self.userId = userId
@@ -69,7 +71,7 @@ class CoverPhoto: Codable {
 extension CoverPhoto {
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(CoverPhoto.self, from: data)
-        self.init(id: me.id, studioId: me.studioId, userId: me.userId, title: me.title, createdAt: me.createdAt, updatedAt: me.updatedAt, fileKey: me.fileKey, fileSize: me.fileSize, contentType: me.contentType, uploadStatus: me.uploadStatus, url: me.url, thumbs: me.thumbs, versions: me.versions)
+        self.init(id: me.id, studioId: me.studioId, userId: me.userId, title: me.title, createdAt: me.createdAt, updatedAt: me.updatedAt, fileKey: me.fileKey, fileSize: me.fileSize, contentType: me.contentType, uploadStatus: me.uploadStatus, coverPhotoId: me.coverPhotoId, url: me.url, thumbs: me.thumbs, versions: me.versions)
     }
 
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -85,15 +87,16 @@ extension CoverPhoto {
 
     func with(
         id: String?? = nil,
-        studioId: Studioid?? = nil,
-        userId: UserId?? = nil,
+        studioId: String?? = nil,
+        userId: String?? = nil,
         title: String?? = nil,
         createdAt: String?? = nil,
         updatedAt: String?? = nil,
         fileKey: String?? = nil,
         fileSize: Int?? = nil,
-        contentType: ContentType?? = nil,
-        uploadStatus: UploadStatus?? = nil,
+        contentType: String?? = nil,
+        uploadStatus: String?? = nil,
+        coverPhotoId: String?? = nil,
         url: String?? = nil,
         thumbs: Thumbs?? = nil,
         versions: [JSONAny]?? = nil
@@ -109,6 +112,7 @@ extension CoverPhoto {
             fileSize: fileSize ?? self.fileSize,
             contentType: contentType ?? self.contentType,
             uploadStatus: uploadStatus ?? self.uploadStatus,
+            coverPhotoId: coverPhotoId ?? self.coverPhotoId,
             url: url ?? self.url,
             thumbs: thumbs ?? self.thumbs,
             versions: versions ?? self.versions

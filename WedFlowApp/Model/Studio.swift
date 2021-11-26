@@ -17,13 +17,14 @@ import Foundation
 
 // MARK: - Studio
 class Studio: Codable {
-    var id: Studioid?
+    var id: String?
     var name: String?
     var website: String?
     var fbLink: String?
     var instagramLink: String?
     var vimeoLink: String?
     var youtubeLink: String?
+    var hasPremiumMembership: Bool?
     var logo: CoverPhoto?
     var backgroundPhoto: CoverPhoto?
 
@@ -35,11 +36,12 @@ class Studio: Codable {
         case instagramLink
         case vimeoLink
         case youtubeLink
+        case hasPremiumMembership
         case logo
         case backgroundPhoto
     }
 
-    init(id: Studioid?, name: String?, website: String?, fbLink: String?, instagramLink: String?, vimeoLink: String?, youtubeLink: String?, logo: CoverPhoto?, backgroundPhoto: CoverPhoto?) {
+    init(id: String?, name: String?, website: String?, fbLink: String?, instagramLink: String?, vimeoLink: String?, youtubeLink: String?, hasPremiumMembership: Bool?, logo: CoverPhoto?, backgroundPhoto: CoverPhoto?) {
         self.id = id
         self.name = name
         self.website = website
@@ -47,6 +49,7 @@ class Studio: Codable {
         self.instagramLink = instagramLink
         self.vimeoLink = vimeoLink
         self.youtubeLink = youtubeLink
+        self.hasPremiumMembership = hasPremiumMembership
         self.logo = logo
         self.backgroundPhoto = backgroundPhoto
     }
@@ -57,7 +60,7 @@ class Studio: Codable {
 extension Studio {
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(Studio.self, from: data)
-        self.init(id: me.id, name: me.name, website: me.website, fbLink: me.fbLink, instagramLink: me.instagramLink, vimeoLink: me.vimeoLink, youtubeLink: me.youtubeLink, logo: me.logo, backgroundPhoto: me.backgroundPhoto)
+        self.init(id: me.id, name: me.name, website: me.website, fbLink: me.fbLink, instagramLink: me.instagramLink, vimeoLink: me.vimeoLink, youtubeLink: me.youtubeLink, hasPremiumMembership: me.hasPremiumMembership, logo: me.logo, backgroundPhoto: me.backgroundPhoto)
     }
 
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -72,13 +75,14 @@ extension Studio {
     }
 
     func with(
-        id: Studioid?? = nil,
+        id: String?? = nil,
         name: String?? = nil,
         website: String?? = nil,
         fbLink: String?? = nil,
         instagramLink: String?? = nil,
         vimeoLink: String?? = nil,
         youtubeLink: String?? = nil,
+        hasPremiumMembership: Bool?? = nil,
         logo: CoverPhoto?? = nil,
         backgroundPhoto: CoverPhoto?? = nil
     ) -> Studio {
@@ -90,6 +94,7 @@ extension Studio {
             instagramLink: instagramLink ?? self.instagramLink,
             vimeoLink: vimeoLink ?? self.vimeoLink,
             youtubeLink: youtubeLink ?? self.youtubeLink,
+            hasPremiumMembership: hasPremiumMembership ?? self.hasPremiumMembership,
             logo: logo ?? self.logo,
             backgroundPhoto: backgroundPhoto ?? self.backgroundPhoto
         )

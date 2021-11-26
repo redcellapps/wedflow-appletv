@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import AVKit
 
 class QueuePlayerViewController: UIViewController {
     
@@ -18,7 +19,7 @@ class QueuePlayerViewController: UIViewController {
     var player: AVQueuePlayer? {
         return queuePlayer
     }
-    
+
     var allMedia:[URL]? {
         didSet {
             guard let allMedia = allMedia else {
@@ -27,10 +28,7 @@ class QueuePlayerViewController: UIViewController {
             setupQueuePlayerWith (videos: allMedia)
         }
     }
-    
-    var queuePlayerViewController: QueuePlayerViewController!
     let queuePlayerControllerSegue = "QueueViewControllerSegue"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +40,8 @@ class QueuePlayerViewController: UIViewController {
             return
         }
         let playerViewController = segue.destination as! QueuePlayerViewController
-        queuePlayerViewController = playerViewController
+        let queuePlayerViewController = playerViewController
+        //queuePlayerViewController = playerViewController
         playerViewController.sets = sets
     }
     
@@ -61,6 +60,7 @@ class QueuePlayerViewController: UIViewController {
         playerLayer = AVPlayerLayer (player: queuePlayer)
         playerLayer!.frame = view.layer.bounds
         view.layer.addSublayer(playerLayer!)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,14 +97,10 @@ class QueuePlayerViewController: UIViewController {
 //      let playerItem = AVPlayerItem(asset: asset)
 //      let player = AVPlayer(playerItem: playerItem)
 //
-//      print ("MOMOMOMOMOMOMOMO SEEK TIME \(sceneTime ?? 0)")
 //
 //        embeddedPlayerViewController.player = player
 //
 //        if sceneTime != 0 {
-//            print ("MOMO STATUS \((player.status.rawValue))")
-//            print ("MOMO ITEM STATUS \((player.currentItem?.status.rawValue)!)")
-//            print ("MOMO CMT TIME \(player.currentTime())")
 ////                let st = Double(sceneTime)
 //                    player.seek(to: CMTime(value: CMTimeValue(sceneTime), timescale: 1), toleranceBefore: CMTime.positiveInfinity, toleranceAfter: CMTime.zero)
 //        }
@@ -125,7 +121,6 @@ class QueuePlayerViewController: UIViewController {
 //
 //        let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as!
 //        VideoPlayerViewController
-//        viewController.title = "MOMOMOMOMOMOMOMOMOMOM"
 //        viewController.video = [video]
 //        return viewController
 //      }

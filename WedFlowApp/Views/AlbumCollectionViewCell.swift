@@ -11,9 +11,11 @@ import UIKit
 class AlbumCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cellBackground: UIImageView!
-    
     @IBOutlet weak var cellTitle: UILabel!
+    @IBOutlet weak var videoLabelView: UIView!
+    @IBOutlet weak var albumContentView: UIView!
     
+    var tmpBounds: CGRect!
     
     private lazy var gradient: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
@@ -38,48 +40,82 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     private func commonInit()
     {
         // Initialization code
-        fadeOut()
-        setImageFrame()
         self.layoutIfNeeded()
         self.layoutSubviews()
         self.setNeedsDisplay()
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if (self.isFocused)
-        {
-            self.gradient.removeFromSuperlayer()
-            self.cellBackground.adjustsImageWhenAncestorFocused = true
-        }
-        else
-        {
-            fadeOut()
-            self.cellBackground.adjustsImageWhenAncestorFocused = false
-        }
+        super.didUpdateFocus(in: context, with: coordinator)
+        if context.nextFocusedView == self {
+            
+             coordinator.addCoordinatedAnimations({
+                UIView.animate(withDuration: UIView.inheritedAnimationDuration / 2) {
+                    self.gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+                    self.fadeOut()
+                    self.tmpBounds = self.cellBackground.bounds
+                    self.cellBackground.bounds = self.albumContentView.bounds
+                    self.videoLabelView.bounds = self.albumContentView.bounds
+                                //self.gradient.removeFromSuperlayer()
+                    self.cellBackground.adjustsImageWhenAncestorFocused = false
+               }
+             }, completion: nil)
+         } else if context.previouslyFocusedView == self {
+           
+             coordinator.addCoordinatedAnimations({
+                UIView.animate(withDuration: UIView.inheritedAnimationDuration * 3) {
+                    self.gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+                    self.fadeOut()
+                    self.cellBackground.bounds = self.tmpBounds
+                    self.videoLabelView.bounds = self.tmpBounds
+                    self.cellBackground.adjustsImageWhenAncestorFocused = false
+               }
+             }, completion: nil)
+         }
+//        if (self.isFocused)
+//        {
+//            //self.gradient.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor]
+//            self.gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+//            fadeOut()
+//            self.tmpBounds = self.cellBackground.bounds
+//            self.cellBackground.bounds = self.albumContentView.bounds
+//            self.videoLabelView.bounds = self.albumContentView.bounds
+//            //self.gradient.removeFromSuperlayer()
+//            self.cellBackground.adjustsImageWhenAncestorFocused = false
+//        }
+//        else
+//        {
+//            self.gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        //            fadeOut()
+        //            self.cellBackground.bounds = self.tmpBounds
+        //            self.videoLabelView.bounds = self.tmpBounds
+        //            self.cellBackground.adjustsImageWhenAncestorFocused = false
+//        }
     }
     
     override func layoutSubviews()
     {
         super.layoutSubviews()
-        fadeOut()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        fadeOut()
+        setImageFrame()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
     }
     func fadeOut(){
-        let gradientView = UIView (frame: cellBackground.frame)
+        let gradientView = UIView (frame: albumContentView.frame)
         gradientView.layer.insertSublayer(gradient, at: 1)
         cellBackground.addSubview(gradientView)
     }
     
     func setImageFrame(){
         cellBackground.layer.masksToBounds = true
-        cellBackground.layer.cornerRadius = 8
+        cellBackground.layer.cornerRadius = 10
         cellBackground.layer.borderWidth = 1
         cellBackground.layer.borderColor = UIColor.lightGray.cgColor
     }

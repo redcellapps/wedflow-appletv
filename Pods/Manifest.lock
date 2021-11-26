@@ -1,26 +1,30 @@
 PODS:
-  - Alamofire (5.2.2)
-  - SDWebImage (5.8.4):
-    - SDWebImage/Core (= 5.8.4)
-  - SDWebImage/Core (5.8.4)
+  - Alamofire (5.1.0)
+  - FocusTvButton (3.0.0)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - FocusTvButton
   - SDWebImage
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FocusTvButton
     - SDWebImage
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  FocusTvButton: 028a088a4a0ac382f2e3c0c45dbd2a420dee98af
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: f532d75ee0d34e3192331aca1ca39fae26a4a455
+PODFILE CHECKSUM: 2d7232408655074a20bf1a079aff5ea300d01968
 
 COCOAPODS: 1.9.0

