@@ -154,6 +154,8 @@ class ViewController: UIViewController {
     @objc func registerTv() {
         if String(describing: UserDefaults.standard.string(forKey: "token") ?? "") == "" {
         let param: Parameters = ["tvCode": self.tvCodeParam]
+        print ("MOMO PARAMETAR = \(param)")
+        print ("MOMO PARAMETAR URL = \(registerURL)")
         AF.request(registerURL, method: .post, parameters: param).validate().responseJSON
         { [self]
             response in

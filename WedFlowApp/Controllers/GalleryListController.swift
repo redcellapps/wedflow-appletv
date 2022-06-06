@@ -98,6 +98,7 @@ class GalleryListController: UIViewController,  UICollectionViewDataSource, UICo
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! GalleryCollectionViewCell
         cell.galleryImage.sd_setImage(with: URL(string: (self.galleries[indexPath.item].coverPhoto?.thumbs?.md) ?? ""), completed: nil)
+        print (self.galleries[indexPath.item].coverPhoto?.thumbs?.md)
         cell.galleryTitle.text = self.galleries[indexPath.item].title
         if self.galleries[indexPath.item].type == "video" {
             cell.galleryType.text = "VIDEO"

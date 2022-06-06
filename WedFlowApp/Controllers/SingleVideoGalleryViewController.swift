@@ -151,10 +151,17 @@ class SingleVideoGalleryViewController: UIViewController, UICollectionViewDelega
             setNeedsFocusUpdate()
         }
         else {
-            if gallery.sets?[0].media?[0].versions?[0].url != "" || gallery.sets?[0].media?[0].versions?[0].url != nil {
-                self.playerItemUrl = URL (string: (gallery.sets?[0].media?[0].versions?[0].url) ?? "")
+            print ("### \(gallery.sets?[0].media?[0].versions?[0].url)")
+            print ("###### \(set?.media?[0].url)")
+            
+                                      
+//            if gallery.sets?[0].media?[0].versions?[0].url != "" || gallery.sets?[0].media?[0].versions?[0].url != nil {
+            if set?.media?[indexPath.item].url != "" || set?.media?[indexPath.item].url != nil {
+                self.playerItemUrl = URL (string: (set?.media?[indexPath.item].url) ?? "")
+//                self.playerItemUrl = URL (string: (gallery.sets?[0].media?[0].versions?[0].url) ?? "")
             } else {
-                self.playerItemUrl = URL (string: (set?.media?[0].url) ?? "")
+                self.playerItemUrl = URL (string: (gallery.sets?[0].media?[0].versions?[0].url) ?? "")
+//                self.playerItemUrl = URL (string: (set?.media?[0].url) ?? "")
             }
             let player = AVPlayer(url: self.playerItemUrl!)
             playerViewController.player = player
